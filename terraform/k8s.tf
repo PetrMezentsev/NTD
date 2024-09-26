@@ -55,9 +55,6 @@ resource "yandex_kubernetes_cluster" "k8s-for-test-app" {
     }
   security_group_ids = [yandex_vpc_security_group.nat-instance-sg.id]
   }
-  provisioner "local-exec" {
-    command  = "yc managed-kubernetes cluster get-credentials --id ${yandex_kubernetes_cluster.k8s-for-test-app.id} --external --force --kubeconfig=/root/.kube/config"
-  }
 }
 
 resource "yandex_kms_symmetric_key" "kms-key" {
