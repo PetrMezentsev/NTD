@@ -79,7 +79,7 @@ resource "yandex_kubernetes_node_group" "ng" {
     resources {
       core_fraction = 5
       cores         = 2
-      memory        = 2
+      memory        = 3
     }
     boot_disk {
       size = 33
