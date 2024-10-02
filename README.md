@@ -72,7 +72,12 @@
 
 1. Работоспособный Kubernetes кластер.
 2. В файле `~/.kube/config` находятся данные для доступа к кластеру.
-3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
+3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.  
+![изображение](https://github.com/user-attachments/assets/2efb584c-d6f5-489c-b1ef-aaae03cf5acd)  
+
+![изображение](https://github.com/user-attachments/assets/ebff4a98-24d0-4948-ae76-3c414553c3a9)
+
+
 
 ---
 ### Создание тестового приложения
@@ -93,9 +98,12 @@
 
 Ожидаемый результат:
 
-1. Git репозиторий с тестовым приложением и Dockerfile.  
-[Репозиторий с тестовым приложением](https://github.com/PetrMezentsev/NTD/tree/main/test-nginx-app)
-2. Регистри с собранным docker image. В качестве регистри может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.  
+1. Git репозиторий с тестовым приложением и Dockerfile.    
+
+[Репозиторий с тестовым приложением](https://gitlab.com/MPVJ/app-for-ntd)  
+
+2. Регистри с собранным docker image. В качестве регистри может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.    
+
 [Регистри](https://hub.docker.com/repository/docker/mpvj/test-nginx-app/general)
 
 ---
@@ -114,10 +122,29 @@
 2. Если на первом этапе вы не воспользовались [Terraform Cloud](https://app.terraform.io/), то задеплойте и настройте в кластере [atlantis](https://www.runatlantis.io/) для отслеживания изменений инфраструктуры. Альтернативный вариант 3 задания: вместо Terraform Cloud или atlantis настройте на автоматический запуск и применение конфигурации terraform из вашего git-репозитория в выбранной вами CI-CD системе при любом комите в main ветку. Предоставьте скриншоты работы пайплайна из CI/CD системы.
 
 Ожидаемый результат:
-1. Git репозиторий с конфигурационными файлами для настройки Kubernetes.
-2. Http доступ к web интерфейсу grafana.
-3. Дашборды в grafana отображающие состояние Kubernetes кластера.
-4. Http доступ к тестовому приложению.
+1. Git репозиторий с конфигурационными файлами для настройки Kubernetes.  
+
+[Конфигурационные файлы](https://github.com/PetrMezentsev/NTD/tree/main/deployment)
+
+2. Http доступ к web интерфейсу grafana.  
+
+Для входа в систему мониторинга 
+
+admin  
+Uarabey
+
+[Web-интерфейс grafana](http://84.201.171.9/d/3138fa155d5915769fbded898ac09fd9/kubernetes-kubelet?orgId=1&refresh=10s)
+
+3. Дашборды в grafana отображающие состояние Kubernetes кластера.  
+
+![изображение](https://github.com/user-attachments/assets/69c37df3-aa70-4758-8da5-434a91855f75)  
+
+![изображение](https://github.com/user-attachments/assets/cc07b1c6-bff2-4b23-a603-5654d07e2920)
+
+
+4. Http доступ к тестовому приложению.  
+
+[Тестовое приложение](http://84.201.146.35/)
 
 ---
 ### Установка и настройка CI/CD
