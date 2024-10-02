@@ -144,7 +144,10 @@ Uarabey
 
 4. Http доступ к тестовому приложению.  
 
-[Тестовое приложение](http://84.201.146.35/)
+[Тестовое приложение](http://84.201.146.35/)  
+
+![изображение](https://github.com/user-attachments/assets/acf2057d-273f-4f1b-9e33-8a47c5c6a027)
+
 
 ---
 ### Установка и настройка CI/CD
@@ -160,9 +163,38 @@ Uarabey
 
 Ожидаемый результат:
 
-1. Интерфейс ci/cd сервиса доступен по http.
-2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
-3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистри, а также деплой соответствующего Docker образа в кластер Kubernetes.
+1. Интерфейс ci/cd сервиса доступен по http.  
+
+[ci/cd сервис](https://gitlab.com/MPVJ/app-for-ntd/-/pipelines)  
+
+
+2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.  
+
+[Задача сборки](https://gitlab.com/MPVJ/app-for-ntd/-/jobs/7971177881)
+
+![изображение](https://github.com/user-attachments/assets/fb9890cf-b280-4310-a4dd-f668a0ce7f5c)
+
+[Собранный образ в регистри](https://hub.docker.com/layers/mpvj/test-nginx-app/1d90d4ca/images/sha256-02b17d20550587e4cb1030f4fd26420e085edcba2b690a233ec20a8e754d77b7?context=repo)
+
+![изображение](https://github.com/user-attachments/assets/1b299fe2-52d0-4e37-bc46-70ae65920637)
+
+
+
+3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистри, а также деплой соответствующего Docker образа в кластер Kubernetes.  
+
+[Задача сборки и деплоя](https://gitlab.com/MPVJ/app-for-ntd/-/jobs/7971217074)  
+
+![изображение](https://github.com/user-attachments/assets/e281f591-3105-4058-ad46-5a46f8d3966b)  
+
+[Собранный образ с тегом в регистри](https://hub.docker.com/layers/mpvj/test-nginx-app/v2.0.1/images/sha256-02b17d20550587e4cb1030f4fd26420e085edcba2b690a233ec20a8e754d77b7?context=repo)  
+
+![изображение](https://github.com/user-attachments/assets/f984745a-711c-49ef-881d-ac98b982a53f)
+
+
+Deployment обновлён
+
+![изображение](https://github.com/user-attachments/assets/5505ecca-eeeb-446a-8a52-a78c665eec78)
+
 
 ---
 ## Что необходимо для сдачи задания?
