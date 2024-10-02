@@ -124,7 +124,7 @@
 Ожидаемый результат:
 1. Git репозиторий с конфигурационными файлами для настройки Kubernetes.  
 
-[Конфигурационные файлы](https://github.com/PetrMezentsev/NTD/tree/main/deployment)
+[Deployment](https://github.com/PetrMezentsev/NTD/tree/main/deployment)
 
 2. Http доступ к web интерфейсу grafana.  
 
@@ -199,11 +199,39 @@ Deployment обновлён
 ---
 ## Что необходимо для сдачи задания?
 
-1. Репозиторий с конфигурационными файлами Terraform и готовность продемонстрировать создание всех ресурсов с нуля.
-2. Пример pull request с комментариями созданными atlantis'ом или снимки экрана из Terraform Cloud или вашего CI-CD-terraform pipeline.
+1. Репозиторий с конфигурационными файлами Terraform и готовность продемонстрировать создание всех ресурсов с нуля.  
+
+[Bucket](https://github.com/PetrMezentsev/NTD/tree/main/s3)
+
+[Terraform](https://github.com/PetrMezentsev/NTD/tree/main/terraform)
+
+2. Пример pull request с комментариями созданными atlantis'ом или снимки экрана из Terraform Cloud или вашего CI-CD-terraform pipeline.  
+
+![изображение](https://github.com/user-attachments/assets/5d8b3f41-a177-46b7-b7c6-da48d9dd842f)
+
 3. Репозиторий с конфигурацией ansible, если был выбран способ создания Kubernetes кластера при помощи ansible.
-4. Репозиторий с Dockerfile тестового приложения и ссылка на собранный docker image.
-5. Репозиторий с конфигурацией Kubernetes кластера.
-6. Ссылка на тестовое приложение и веб интерфейс Grafana с данными доступа.
+4. Репозиторий с Dockerfile тестового приложения и ссылка на собранный docker image.  
+
+[Репозиторий с тестовым приложением](https://gitlab.com/MPVJ/app-for-ntd)  
+
+[Регистри](https://hub.docker.com/repository/docker/mpvj/test-nginx-app/general)
+
+5. Репозиторий с конфигурацией Kubernetes кластера.  
+
+[Deployment](https://github.com/PetrMezentsev/NTD/tree/main/deployment)
+
+6. Ссылка на тестовое приложение и веб интерфейс Grafana с данными доступа.  
+
+Для входа в систему мониторинга 
+
+
+[Тестовое приложение](http://84.201.146.35/)
+
+
+[Web-интерфейс grafana](http://84.201.171.9/d/3138fa155d5915769fbded898ac09fd9/kubernetes-kubelet?orgId=1&refresh=10s)  
+
+admin  
+Uarabey
+
 7. Все репозитории рекомендуется хранить на одном ресурсе (github, gitlab)
 
