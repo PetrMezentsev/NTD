@@ -42,6 +42,10 @@
    б. Альтернативный вариант:  [Terraform Cloud](https://app.terraform.io/)  
 3. Создайте VPC с подсетями в разных зонах доступности.
 4. Убедитесь, что теперь вы можете выполнить команды `terraform destroy` и `terraform apply` без дополнительных ручных действий.
+![изображение](https://github.com/user-attachments/assets/12f272dc-af05-467b-b537-d5eb82e5c988)  
+
+![изображение](https://github.com/user-attachments/assets/5c6f0548-ee22-4493-9fe6-f247f79e545f)
+
 5. В случае использования [Terraform Cloud](https://app.terraform.io/) в качестве [backend](https://www.terraform.io/docs/language/settings/backends/index.html) убедитесь, что применение изменений успешно проходит, используя web-интерфейс Terraform cloud.
 
 Ожидаемые результаты:
