@@ -89,7 +89,7 @@ resource "yandex_kubernetes_node_group" "ng" {
       type = "containerd"
     }
     scheduling_policy {
-      preemptible =  true
+      preemptible =  false
     }
   }
   scale_policy {
